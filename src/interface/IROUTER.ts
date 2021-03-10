@@ -1,6 +1,6 @@
 import * as express from "express";
 
-interface IRouter {
+interface IROUTER {
     path: string;
     middleware: any[];
     handler: express.Router;
