@@ -1,6 +1,6 @@
 {
   "name": "common-clases",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "author": "Ismael Leiva",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2"
   }
 }
