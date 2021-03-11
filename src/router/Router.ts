@@ -7,10 +7,11 @@ export abstract class Router {
     private readonly handlers: any;
 
     constructor(controller: any) {
+        this.handlers = controller;
         this.Controller = this.handlers.prototype;
         this.router = express.Router();
     }
     protected handler(action: () => void): any {
-        return (req: Request, res: Response) => action.call(new this.Controller(req, res));
+        return (req: Request, res: Response) => action.call(new this.handlers(req, res));
     }
 }
