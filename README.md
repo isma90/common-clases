@@ -46,6 +46,20 @@ export class MyClassRouter extends Router {
 }
 ````
 
+Validación de esquemas
+
+Se deben crear esquemas utilizando Joi para ello, importal la función de validación y agregarla a la lista de middlewares pasandole el esquema a validar.
+
+````typescript
+import { schemaValidator } from 'common-clases';
+import { requestSchema } from './schemas';
+
+...
+this.router.get("/some-path", [schemaValidator(requestSchema)], this.handler(this.Controller.myFunction));
+
+
+````
+
 ### Controller
 
 Importar la dependencia `import {Controller} from "common-clases";`
